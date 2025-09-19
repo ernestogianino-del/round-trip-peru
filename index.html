@@ -19,53 +19,14 @@
     </nav>
   </header>
 
-  <!-- Hero con carrusel de flyers -->
-  <section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-black">
-    <div class="w-full h-full relative">
-      <!-- Slides -->
-      <div class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-700">
-        <img src="https://i.postimg.cc/rsQkybhX/Pulse-19-sep.jpg" alt="Flyer 1" class="w-full h-full object-cover">
-      </div>
-      <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700">
-        <img src="https://images.unsplash.com/photo-1518972559570-0a555c0c29d4" alt="Flyer 2" class="w-full h-full object-cover">
-      </div>
-      <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700">
-        <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2" alt="Flyer 3" class="w-full h-full object-cover">
-      </div>
-
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      <!-- Contenido -->
-      <div class="relative z-10 p-10 rounded-xl text-center text-white max-w-2xl mx-auto">
-        <h2 class="text-4xl font-bold mb-4">Conoce Miraflores y su vida nocturna</h2>
-        <p class="mb-6">Consigue acceso en bares, clubes, festivales y conciertos. Vive experiencias únicas con Round Trip Peru.</p>
-        <a href="#actividades" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition">
-          Explorar Actividades
-        </a>
-      </div>
+  <!-- Hero -->
+  <section class="relative h-[80vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519677100203-a0e668c92439');">
+    <div class="bg-black bg-opacity-60 p-10 rounded-xl text-center text-white max-w-2xl">
+      <h2 class="text-4xl font-bold mb-4">Conoce Miraflores y su vida nocturna</h2>
+      <p class="mb-6">Consigue acceso en bares, clubes, festivales y conciertos. Vive experiencias únicas con Round Trip Peru.</p>
+      <a href="#actividades" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition">Explorar Actividades</a>
     </div>
   </section>
-
-  <!-- Script del carrusel -->
-  <script>
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.opacity = (i === index) ? '1' : '0';
-      });
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    }
-
-    // Cambia cada 5 segundos
-    setInterval(nextSlide, 5000);
-  </script>
 
   <!-- Actividades -->
   <section id="actividades" class="py-16 px-6 md:px-20 bg-white">
@@ -118,11 +79,11 @@
     <p class="text-center mb-6">Regístrate en nuestras listas exclusivas para asegurar tu ingreso libre o con beneficios especiales.</p>
     
     <!-- Banner del evento -->
-    <div class="max-w-3xl mx-auto mb-8">
+    <div class="max-w-4xl mx-auto mb-8">
       <img 
         src="https://i.postimg.cc/rsQkybhX/Pulse-19-sep.jpg" 
         alt="Flyer del evento" 
-        class="w-full max-h-[350px] object-contain rounded-lg shadow-lg">
+        class="w-full rounded-lg shadow-lg">
     </div>
 
     <!-- Formulario de Google -->
